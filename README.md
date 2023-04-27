@@ -1,9 +1,17 @@
-# MiraiCP-multiheader-template
-> 留意和MiraiCP loader/plugin 的版本对应
-> 
-> 当前文件版本是 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/Nambers/MiraiCP?include_prereleases)](https://github.com/Nambers/MiraiCP/releases/) 
-> 
+# GPT-MiraiCP
+简易 GPT bot 实现，仅限私聊对话
 
-本仓库为[MiraiCP-template](https://github.com/0ph1uch1/MiraiCP-template)的一个替代，旨在减少重新编译所花费的时间。
+使用的后端为[OpenAISession](https://github.com/Antares0982/OpenAISession)，配置文件格式如下，第一次填写sid全填-1即可：
 
-除include文件不同外，使用本模板的方法和[MiraiCP-template](https://github.com/0ph1uch1/MiraiCP-template)完全相同，请参考该模板。
+```json
+{
+    "permitted": [
+        {
+            "qqid": 1234567,
+            "sid": -1
+        }
+    ],
+    "port": 27000
+}
+```
+

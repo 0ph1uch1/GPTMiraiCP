@@ -10,11 +10,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(BUILD_USE_64BITS on)
 
 # 声明C++项目
-project(MIRAICP_TEMPLATE LANGUAGES CXX)
+project(MIRAICP_GPT LANGUAGES CXX)
 
 # 寻找库的头文件
 set(
         MIRAICP_SOURCE_HEADER_PATH
+        ${CMAKE_CURRENT_SOURCE_DIR}/3rd_include
         ${CMAKE_CURRENT_SOURCE_DIR}/3rd_include/json
         ${CMAKE_CURRENT_SOURCE_DIR}/3rd_include/json/nlohmann
         ${CMAKE_CURRENT_SOURCE_DIR}/3rd_include/utf8
@@ -27,7 +28,7 @@ set(
 file(GLOB_RECURSE PLUGIN_SOURCE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
 
 # 添加动态库编译目标
-set(MIRAICP_TARGET_NAME MiraiCPPlugin)
+set(MIRAICP_TARGET_NAME MiraiCPGPT)
 add_library(
         ${MIRAICP_TARGET_NAME}
         SHARED
